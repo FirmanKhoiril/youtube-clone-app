@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monstserrat&family=Nanum+Gothic&display=swap");
 
 * {
   padding: 0;
@@ -6,5 +6,6 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Didact Gothic", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
+  color: white;
 }

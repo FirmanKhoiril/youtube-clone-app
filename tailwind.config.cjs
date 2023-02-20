@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        gothic: "Nanum Gothic",
+        mons: "Montserrat",
+      },
+      backgroundColor: {
+        dark: "#0F0F0e",
       },
     },
   },

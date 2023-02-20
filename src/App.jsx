@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Box } from "@mui/material";
+import { Navbar, SearchResult, VideoDetail, ChannelDetail, Sidebar } from "./components";
+import { Home } from "./pages";
+import { useStateContext } from "./context/ContextApi";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { mobile } = useStateContext();
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <Box className="bg-dark">
+      <Navbar />
+      {!mobile && (
+        <div className="relative">
+          <Sidebar />
+          <div className="absolute bg-black/40 w-full h-screen" />
+        </div>
+      )}
+      <Routes>
+        <Route element={<Home />} path="/" />
+        <Route element={<VideoDetail />} path="/video/:id" />
+        <Route element={<SearchResult />} path="/search/:searchResult" />
+        <Route element={<ChannelDetail />} path="/channel/:id" />
+      </Routes>
+    </Box>
+  );
 }
 
-export default App
+export default App;
