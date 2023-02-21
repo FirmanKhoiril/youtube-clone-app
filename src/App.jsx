@@ -1,21 +1,22 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
-import { Navbar, SearchResult, VideoDetail, ChannelDetail, Sidebar } from "./components";
+import { SearchResult, VideoDetail, ChannelDetail, Sidebar, Navbar, MobileSearch } from "./components";
 import { Home } from "./pages";
 import { useStateContext } from "./context/ContextApi";
 
 function App() {
-  const { mobile } = useStateContext();
+  const { mobile, setMobile } = useStateContext();
   return (
-    <Box className="bg-dark">
-      <Navbar />
+    <Box className="bg-dark h-screen">
       {!mobile && (
         <div className="relative">
           <Sidebar />
-          <div className="absolute bg-black/40 w-full h-screen" />
+          <div onClick={() => setMobile(true)} className="absolute bg-black/30 z-20 w-full min-h-screen  " />
         </div>
       )}
+      <MobileSearch />
+      <Navbar />
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<VideoDetail />} path="/video/:id" />

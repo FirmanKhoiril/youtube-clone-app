@@ -4,7 +4,8 @@ import { Genres, Video } from "../components";
 
 const Home = () => {
   return (
-    <Stack sx={{ flexDirection: { xs: "column", md: "row" } }}>
+    <Stack sx={{ flexDirection: "column" }}>
+      <Genres />
       <Video />
     </Stack>
   );
