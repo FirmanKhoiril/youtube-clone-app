@@ -14,6 +14,7 @@ const MobileSearch = () => {
     e.preventDefault();
     navigate(`/search/${search}`);
     setSearch("");
+    setMobileSearchActive(false);
   };
 
   return (

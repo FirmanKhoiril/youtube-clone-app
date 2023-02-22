@@ -9,7 +9,7 @@ function App() {
   const { mobile, setMobile } = useStateContext();
   return (
     <Box className="bg-dark h-screen">
-      {!mobile && (
+      {mobile && (
         <div className="relative">
           <Sidebar />
           <div onClick={() => setMobile(true)} className="absolute bg-black/30 z-20 w-full min-h-screen  " />

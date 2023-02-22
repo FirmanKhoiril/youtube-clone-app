@@ -9,3 +9,20 @@ body {
   font-family: "Nanum Gothic", sans-serif;
   color: white;
 }
+
+.scroller {
+  scrollbar-color: rgb(2, 132, 199) #fff;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 2px;
+  height: 1px;
+}
+
+.scroller::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+}
+
+.scroller::-webkit-scrollbar-thumb:horizontal {
+  background-color: rgb(2, 132, 199);
+}
