@@ -8,7 +8,7 @@ import { useStateContext } from "./context/ContextApi";
 function App() {
   const { mobile, setMobile } = useStateContext();
   return (
-    <Box className="bg-dark h-screen">
+    <Box className="bg-dark h-auto">
       {mobile && (
         <div className="relative">
           <Sidebar />

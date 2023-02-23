@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const { setMobile, setMobileSearchActive } = useStateContext();
   return (
-    <Box display={"flex"} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 10, marginX: 1 }} height={64} className="bg-dark">
+    <Box display={"flex"} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 10, paddingX: 1 }} height={64} className="bg-dark">
       <Box sx={{ display: "flex", alignItems: "center", p: "4px" }} className="space-x-2">
         <BiMenuAltLeft onClick={() => setMobile((prev) => !prev)} className="text-[40px] rounded-full hover:bg-white/20 p-2" />
         <Link to="/">

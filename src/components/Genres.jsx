@@ -7,7 +7,7 @@ const Genres = () => {
   const { categori, setCategori } = useStateContext();
 
   return (
-    <Stack sx={{ display: "flex", flexDirection: "row", px: 2, py: 1, overflowX: "auto", gap: 1, mt: 1 }} className="scroller">
+    <Stack sx={{ display: "flex", flexDirection: "row", px: 2, py: 1, my: 1, overflowX: "auto", gap: 1 }} className="scroller sticky">
       {categoriesGenre.map((category) => (
         <button
           key={category.name}
