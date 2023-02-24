@@ -1,10 +1,12 @@
 export { default as Video } from "./video/Video";
 export { default as VideoDetail } from "./video/VideoDetail";
 export { default as VideoCard } from "./video/VideoCard";
+export { default as VideoCommentDetails } from "./video/VideoCommentDetails";
 
 export { default as Channel } from "./channel/Channel";
 export { default as ChannelDetail } from "./channel/ChannelDetail";
 export { default as ChannelCard } from "./channel/ChannelCard";
+export { default as ChannelProfile } from "./channel/ChannelProfile";
 
 export { default as SearchBar } from "./search/SearchBar";
 export { default as SearchResult } from "./search/SearchResult";

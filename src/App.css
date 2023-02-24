@@ -19,10 +19,27 @@ body {
   height: 1px;
 }
 
+.react-player {
+  height: 65vh !important;
+  width: 60% !important;
+  margin-left: 125px;
+
+  margin-top: 25px;
+}
+
 .scroller::-webkit-scrollbar-track-piece {
   background-color: #fff;
 }
 
 .scroller::-webkit-scrollbar-thumb:horizontal {
   background-color: rgb(2, 132, 199);
+}
+
+@media screen and (max-width: 1025px) {
+  .react-player {
+    height: 50vh !important;
+    width: 100% !important;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
 }

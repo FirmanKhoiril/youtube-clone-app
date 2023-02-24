@@ -15,10 +15,9 @@ const Home = () => {
 
   const { data, isFetching, isLoading, isSuccess, error, isError } = useQuery(["categoryYoutube", categori, results], datasYoutube, {
     refetchOnWindowFocus: false,
+    refetchInterval: 3000,
+    staleTime: 10 * (3000 * 10),
   });
-
-  const videos = data?.items;
-  const lastPages = data?.pageInfo?.totalResults;
 
   return (
     <Stack sx={{ flexDirection: "column", display: "flex", height: "auto", overflowY: "auto" }}>
@@ -26,7 +25,7 @@ const Home = () => {
 
       {isSuccess && (
         <>
-          <Video videos={videos} />
+          <Video videos={data?.items} />
         </>
       )}
 
