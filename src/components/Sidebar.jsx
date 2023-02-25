@@ -10,7 +10,7 @@ import { first, second, three } from "../assets/DataSidebar";
 const Sidebar = () => {
   const { setMobile } = useStateContext();
   return (
-    <motion.div whileInView={{ x: [-235, 0] }} transition={{ duration: 0.5 }} className="absolute  flex z-40 w-[235px] pl-[6px] pt-[6px] bg-dark h-auto overflow-y-auto flex-col">
+    <motion.div whileInView={{ x: [-235, 0] }} transition={{ duration: 0.5 }} className="fixed  flex z-40 w-[235px] pl-[6px] pt-[6px] bg-dark h-auto overflow-y-auto flex-col">
       <Box sx={{ display: "flex", alignItems: "center", p: "6px" }} className="space-x-2">
         <BiMenuAltLeft onClick={() => setMobile((prev) => !prev)} className="text-[40px] rounded-full hover:bg-white/20 p-2" />
         <Link onClick={() => setMobile(true)} to="/">

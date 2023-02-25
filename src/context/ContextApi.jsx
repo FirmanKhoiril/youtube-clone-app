@@ -7,9 +7,10 @@ export const ContextProvider = ({ children }) => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState(50);
   const [categori, setCategori] = useState("new");
+  const [likes, setLikes] = useState(false);
   const [mobileSearchActive, setMobileSearchActive] = useState(false);
 
-  return <StateContext.Provider value={{ mobile, categori, setCategori, setMobile, mobileSearchActive, setMobileSearchActive, search, setSearch, results, setResults }}>{children}</StateContext.Provider>;
+  return <StateContext.Provider value={{ mobile, categori, likes, setLikes, setCategori, setMobile, mobileSearchActive, setMobileSearchActive, search, setSearch, results, setResults }}>{children}</StateContext.Provider>;
 };
 
 export const useStateContext = () => useContext(StateContext);

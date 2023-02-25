@@ -15,8 +15,8 @@ const Home = () => {
 
   const { data, isFetching, isLoading, isSuccess, error, isError } = useQuery(["categoryYoutube", categori, results], datasYoutube, {
     refetchOnWindowFocus: false,
-    refetchInterval: 3000,
-    staleTime: 10 * (3000 * 10),
+    refetchInterval: 10000,
+    staleTime: 10 * (60 * 1000),
   });
 
   return (

@@ -12,7 +12,7 @@ function App() {
       {mobile && (
         <div className="relative">
           <Sidebar />
-          <div onClick={() => setMobile(true)} className="absolute bg-black/30 z-20 w-full min-h-screen  " />
+          <div onClick={() => setMobile(false)} className="fixed bg-black/30 z-20 w-full min-h-screen  " />
         </div>
       )}
       <MobileSearch />

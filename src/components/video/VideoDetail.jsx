@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import { fetchDataYoutube } from "../../api/fetchData";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
-import { ChannelProfile } from "../../components";
+import { ChannelProfile, VideoCommentDetails } from "../../components";
 
 const VideoDetail = () => {
   const { id } = useParams();
@@ -14,18 +14,10 @@ const VideoDetail = () => {
     return data;
   };
 
-  const commentDetails = async () => {
-    const dataComment = await fetchDataYoutube(`commentThreads?part=snippet&videoId=${id}&maxResults=100`);
-    return dataComment;
-  };
-
-  const { data: comment } = useQuery(["commentDetails", id], commentDetails, {
-    refetchOnWindowFocus: false,
-  });
-
   const { data } = useQuery(["detailVideos", id], videoDetails, {
     refetchOnWindowFocus: false,
   });
+
   //
 
   return (
@@ -39,7 +31,8 @@ const VideoDetail = () => {
                 <Typography variant="h6" sx={{ ml: { xs: 0, md: "107px" } }} p={2} fontWeight={500} color="whitesmoke">
                   {item?.snippet?.title}
                 </Typography>
-                <ChannelProfile channelId={item?.snippet?.channelId} />
+                <ChannelProfile channelId={item?.snippet?.channelId} like={item?.statistics?.likeCount} />
+                <VideoCommentDetails id={id} />
               </Box>
             </Box>
           </Stack>
