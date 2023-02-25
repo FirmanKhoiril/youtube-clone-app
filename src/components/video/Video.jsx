@@ -4,7 +4,7 @@ import { VideoCard } from "../";
 
 const Video = ({ videos }) => {
   return (
-    <Stack sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: "14px", flexWrap: "wrap", m: { xs: 1, md: 2 }, px: 2 }}>
+    <Stack sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, flexWrap: "wrap", gap: 4, m: { xs: 1, md: 2 }, px: 2 }}>
       {videos.map((item, i) => (
         <Box key={i}>{item?.id?.videoId && <VideoCard video={item} />}</Box>
       ))}

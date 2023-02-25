@@ -18,11 +18,9 @@ const VideoDetail = () => {
     refetchOnWindowFocus: false,
   });
 
-  //
-
   return (
     <>
-      {data?.items?.map((item, i) => (
+      {data?.items?.map((item) => (
         <Box minHeight={"95vh"} key={item?.id}>
           <Stack direction={{ xs: "column", md: "row" }}>
             <Box flex={1}>

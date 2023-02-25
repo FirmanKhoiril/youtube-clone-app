@@ -30,7 +30,7 @@ const Home = () => {
       )}
 
       {isError && <Error error={error} />}
-      {isLoading && isFetching ? <Loading /> : ""}
+      {isLoading && isFetching ? <Loading /> : null}
     </Stack>
   );
 };
