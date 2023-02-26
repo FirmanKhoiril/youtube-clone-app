@@ -40,10 +40,10 @@ const VideoDetail = () => {
                     <Typography variant="h6" sx={{ ml: { xs: 0, md: "107px" } }} p={2} fontWeight={500} color="whitesmoke">
                       {item?.snippet?.title}
                     </Typography>
-                    <Stack sx={{ color: "#fff" }} py={1} px={2}>
+                    {/* <Stack sx={{ color: "#fff" }} py={1} px={2}>
                       <ChannelProfile channelId={item?.snippet?.channelId} like={item?.statistics?.likeCount} />
                       <VideoCommentDetails id={id} />
-                    </Stack>
+                    </Stack> */}
                   </Box>
                 </Box>
                 <Box py={4}>
