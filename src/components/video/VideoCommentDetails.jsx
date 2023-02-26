@@ -45,7 +45,7 @@ const VideoCommentDetails = ({ id }) => {
               <Box sx={{ display: "flex", gap: 2, width: { md: 800, xs: "auto" } }}>
                 <Box sx={{ width: 60 }}>
                   <CardMedia
-                    image={item?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl}
+                    image={item?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl || ""}
                     alt={item?.snippet?.topLevelComment?.snippet?.authorDisplayName}
                     sx={{ height: 40, width: 40 }}
                     className="rounded-full"
@@ -57,7 +57,7 @@ const VideoCommentDetails = ({ id }) => {
                   <Typography variant="body1" className="space-x-2 flex items-center">
                     <span>{item?.snippet?.topLevelComment?.snippet?.authorDisplayName}</span>
 
-                    <p className="text-gray-300 text-[12px]">{moment(item?.snippet?.topLevelComment?.snippet?.publishedAt, "YYYYMMDD").fromNow()}</p>
+                    <span className="text-gray-300 text-[12px]">{moment(item?.snippet?.topLevelComment?.snippet?.publishedAt, "YYYYMMDD").fromNow()}</span>
                   </Typography>
                   <Typography variant="subtitle2">{item?.snippet?.topLevelComment?.snippet?.textOriginal}</Typography>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1, mt: 1 }}>

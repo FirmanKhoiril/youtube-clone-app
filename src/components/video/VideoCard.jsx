@@ -20,7 +20,7 @@ const VideoCard = ({ video }) => {
   return (
     <Card sx={{ width: { xs: 320, sm: 280, md: 300 }, borderRadius: 0 }}>
       <Link to={`/video/${videoId}`}>
-        <CardMedia sx={{ width: { xs: 320, sm: 280, md: 300 }, height: 170 }} image={url} alt={channelTitle} />
+        <CardMedia sx={{ width: { xs: 320, sm: 280, md: 300 }, height: 170 }} image={url || ""} alt={channelTitle} />
       </Link>
 
       <CardContent sx={{ height: 80 }} className="bg-dark">

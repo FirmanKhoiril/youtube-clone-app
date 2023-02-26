@@ -22,7 +22,7 @@ const ChannelProfile = ({ channelId, like }) => {
 
   return (
     <>
-      {isLoading && isFetching && <loading />}
+      {isLoading && isFetching && <Loading />}
       {isError && <Error error={error} />}
       {isSuccess && (
         <>
@@ -30,7 +30,7 @@ const ChannelProfile = ({ channelId, like }) => {
             <Box key={i} sx={{ display: "flex", width: { xs: "auto", md: 800, lg: 1024 }, justifyContent: "space-between", flexWrap: "wrap", flexDirection: "row", height: 50, mt: "2px", mx: { xs: 2, md: "120px" }, mb: 4 }}>
               <Box sx={{ display: "flex", flexDirection: "row", height: 50, mt: "2px" }}>
                 <Link to={`/channel/${channelId}`}>
-                  <CardMedia component="image" image={item?.snippet?.thumbnails?.high?.url} sx={{ width: 50, height: 50, borderRadius: "40px" }} />
+                  <CardMedia component="image" image={item?.snippet?.thumbnails?.high?.url || ""} sx={{ width: 50, height: 50, borderRadius: "40px" }} />
                 </Link>
                 <Box sx={{ display: "flex", ml: 1, flexDirection: "column" }}>
                   <Link to={`/channel/${channelId}`}>
